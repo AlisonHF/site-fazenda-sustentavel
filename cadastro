@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela de Cadastro</title>
+</head>
+<body>
+    <img src="icon.webp" alt="icone fazenda">
+    <form class="cadastro">     
+        <h2>CADASTRO</h2>
+        <div class="box-user">
+            <input type="text" name="" required>
+            <label>Usuário</label>
+        </div>
+        <div class="box-user">
+            <input type="password" name="" required>
+            <label>Senha</label>
+        </div>
+        <div class="box-user">
+            <input type="password" name="" required>
+            <label>Email</label>
+        </div>
+        <div class="box-user">
+            <input type="password" name="" required>
+            <label>Telefone</label>
+        </div>
+        <a href="#" class="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Cadastrar-se
+        </a>       
+    </form>
+</body>
+</html>
