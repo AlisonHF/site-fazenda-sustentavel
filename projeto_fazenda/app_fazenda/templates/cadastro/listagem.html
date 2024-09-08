@@ -1,0 +1,38 @@
+{% extends 'base.html' %} <!-- Trazendo o arquivo base -->
+
+{% block title %}Listagem{% endblock %}
+
+{% block content %}
+
+<h1>Listagem dos dados</h1>
+<div>
+    <!--Tabela com a listagem dos dados-->
+    <table class="table table-striped">
+
+        <tr>
+            <th>ID</th>
+            <th>Bloco</th>
+            <th>Cultura</th>
+            <th>PH</th>
+            <th>Umidade</th>
+            <th>Textura</th>
+        </tr>
+
+        <!--Iteração dentro do banco de dados-->
+        {% for dado in dados %}
+
+        <tr>    
+            <td>{{ dado.id }}</td>
+            <td>{{ dado.bloco }}</td>
+            <td>{{dado.cultura }}</td>
+            <td>{{ dado.ph }}</td>
+            <td>{{ dado.umidade }}</td>
+            <td>{{ dado.textura }}</td>  
+        </tr>
+
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}
+
