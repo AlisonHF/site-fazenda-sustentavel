@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Tabela de Cultivo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: #292a30;
+            color: white;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #69DE56;
+            padding: 10px;
+        }
+
+        .logo i {
+            font-size: 30px;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #292a30;
+        }
+
+        .icon i {
+            font-size: 20px;
+            color: white;
+        }
+
+        .title {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 30px;
+            font-weight: bold;
+            color: #69DE56;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            color: white;
+        }
+
+        th {
+            background-color: #69DE56;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        footer {
+            background-color: #69DE56;
+            padding: 10px;
+            text-align: center;
+            color: black;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+            </div>
+            <nav>
+                <a href="login.html">LOGIN</a>
+                <a href="como_usar.html">COMO USAR</a>
+                <a href="ajustes.html">AJUSTES</a>
+                <a href="suporte.html">SUPORTE</a>
+                <a href="index.html" class="nav-link">TABELA</a>
+            </nav>
+            <div class="icon">
+                <i class="fas fa-globe"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="title">Tabela do Banco de Dados</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Propriedade</th>
+                    <th>Cultivo</th>
+                    <th>Cultura</th>
+                    <th>Data/Plantio</th>
+                    <th>Data/Colher</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bloco A1</td>
+                    <td>Milho</td>
+                    <td>Ordenada</td>
+                    <td>15/03</td>
+                    <td>25/01</td>
+                </tr>
+                <tr>
+                    <td>Bloco B2</td>
+                    <td>Soja</td>
+                    <td>Rotativa</td>
+                    <td>01/04</td>
+                    <td>20/02</td>
+                </tr>
+                <tr>
+                    <td>Bloco C3</td>
+                    <td>Trigo</td>
+                    <td>Estacionária</td>
+                    <td>10/05</td>
+                    <td>30/03</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        Todos os direitos reservados
+    </footer>
+</body>
+</html>

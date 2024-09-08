@@ -1,0 +1,104 @@
+/* Reseta os estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fundo branco */
+}
+
+header {
+    background-color: #8fdf1c; /* Cor de fundo verde do header */
+    padding: 15px 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Cor do ícone */
+}
+
+nav a {
+    color: #ffffff; /* Cor do texto do header */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Cor do ícone */
+}
+
+main {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ffffff; /* Fundo branco da tabela */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para a tabela */
+}
+
+thead {
+    background-color: #f2f2f2; /* Cor de fundo do cabeçalho da tabela */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0; /* Cor de borda das células */
+}
+
+th {
+    font-weight: bold;
+    color: #000000; /* Cor do texto do cabeçalho da tabela */
+}
+
+td {
+    color: #000000; /* Cor do texto das células */
+}
+
+tr:hover {
+    background-color: #f5f5f5; /* Cor de fundo ao passar o mouse sobre a linha */
+}
+
+.send-button {
+    background-color: #8fdf1c; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do ícone no botão */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    display: block;
+}
+
+.send-button i {
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
