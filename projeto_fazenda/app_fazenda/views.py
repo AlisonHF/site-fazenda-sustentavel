@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic.edit import DeleteView, UpdateView
 from .models import Dados, Cultivo
 from .form import DadosForm 
-
+from django.contrib.auth import authenticate, login
 
 
 # Classe genérica do django para view de delete
@@ -23,7 +23,7 @@ class DadosUpdateView(UpdateView):
 
 
 # View cadastro
-def cadastro(request):
+def cadastro_cultivo(request):
     # Se a requisição da página for POST
     if request.method == 'POST':
         # Cria o formulário com o ModelForm
@@ -100,3 +100,26 @@ def detalhe(request):
     # Caso não houver
     else:
         return render(request, 'detalhes_registro/detalhe.html')
+
+# View para realizar o login
+def login_view(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        senha = request.POST['senha']
+
+        user = authenticate(request, email=email, password=senha)
+        if user is not None:
+            login(request, user)
+            return redirect('pagina_inicial', usuario_id=user.id)  # Passa o ID do usuário para a próxima página
+
+        return render(request, 'login/login.html', {'error': 'Usuário ou senha inválidos'})
+
+    return render(request, 'login/login.html')
+
+# View para cadastro de usuário
+def cadastro_usuario(request):
+    return render(request, 'login/cadastro.html')
+
+# View Home
+def home(request):
+    return render(request, 'inicio/home.html')

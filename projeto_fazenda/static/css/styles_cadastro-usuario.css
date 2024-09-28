@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex; /* Define que o conteúdo interno será um flexbox */
+    align-items: center; /* Alinha os elementos ao centro verticalmente */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    min-height: 100vh; /* Define que a altura mínima será 100% da altura da tela */
+    background-color: #292a30; /* Cor de fundo escura */
+    margin: 0; /* Remove margens do corpo para evitar qualquer deslocamento */
+}
+
+img {
+    width: 80px; 
+    position: fixed; 
+    top: 10px; 
+    left: 10px; 
+}
+
+.cadastro {
+    background: rgba(0, 0, 0, .5); /* Fundo semitransparente preto */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 400px; /* Largura fixa */
+    padding: 40px; /* Espaçamento interno */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para destaque */
+}
+
+.cadastro h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #69DE56;
+    text-align: center;
+}
+
+.cadastro .box-user {
+    position: relative;
+}
+
+.cadastro .box-user input {
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.cadastro .box-user label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: #ffffff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.cadastro .box-user input:focus ~ label,
+.cadastro .box-user input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #69DE56;
+    font-size: 12px;
+}
+
+.forget {
+    font-size: 12px;
+    color: #5b5b5b;
+    float: right;
+}
+
+.btn-custom {
+    background-color: #69DE56; /* Fundo verde */
+    color: #ffffff; /* Letras brancas */
+    padding: 10px 50px; /* Ajustando o tamanho */
+    text-align: center; /* Centralizando o texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: block; /* Alinhando o botão como bloco */
+    margin: 20px auto; /* Centralizando horizontalmente */
+    font-size: 14px; /* Tamanho da fonte menor */
+    font-weight: bold; /* Negrito */
+    text-transform: uppercase; /* Letras maiúsculas */
+    transition: background 0.5s ease; /* Transição suave */
+    border: none; /* Sem bordas */
+}
+
+.btn-custom:hover {
+    background-color: #82c762; /* Alteração de cor no hover */
+    color: #000; /* Mudança para letras pretas no hover */
+}

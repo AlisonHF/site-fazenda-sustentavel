@@ -10,7 +10,7 @@ urlpatterns = [
     
     # Caminhos parte cadastro
     path('admin/', admin.site.urls),
-    path('', views.cadastro, name='cadastro'),
+    path('cadastro-plantio/', views.cadastro_cultivo, name='cadastro'),
     path('listagemdados/', views.listagem, name='dados_fazenda'),
     path('excluir/<int:pk>/', views.DadosDeleteView.as_view(), name='excluir_dados'),
     path('editar/<int:pk>/', views.DadosUpdateView.as_view(), name='editar_dados'),
@@ -19,4 +19,8 @@ urlpatterns = [
     path('selecionar/', views.selecionar, name='selecionar'),
     path('detalhe/', views.detalhe, name='detalhe'),
 
+    # Caminhos para login
+    path('', views.login_view, name='login'),
+    path('cadastro-usuario/', views.cadastro_usuario, name='cadastro-usuario'),
+    path('home/', views.home, name='home')
 ]

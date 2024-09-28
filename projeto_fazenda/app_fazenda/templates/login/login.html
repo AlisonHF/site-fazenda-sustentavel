@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles_login.css' %}">
+    <title>Tela de Login</title>
+</head>
+<body>
+    <form class="login" action="{% url 'home' %}" method="POST"> <!-- Incluído método POST -->
+        {% csrf_token %}
+        <h2>LOGIN</h2>
+        <div class="box-user">
+            <input type="text" name="username" required> <!-- Definido o name -->
+            <label>Usuário</label>
+        </div>
+        <div class="box-user">
+            <input type="password" name="password" required> <!-- Definido o name -->
+            <label>Senha</label>
+        </div>
+        <div>
+            <a href="{% url 'cadastro-usuario' %}" class="forget"> Voltar para cadastro</a>
+        </div>
+        <form method="POST" action="{% url 'home' %}">
+            
+            <!-- Outros campos do formulário -->
+            <button type="submit" class="btn">Login</button>
+        </form>         
+    </form>
+</body>
+</html>
